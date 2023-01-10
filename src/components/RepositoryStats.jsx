@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import StyleText from "./StyleText";
+import StyledText from "./StyledText";
 
 const parseThousand = (value) => {
   return value >= 1000 ? `${Math.round(value / 100) / 10}K` : String(value);
@@ -10,30 +10,30 @@ const RepositoryStats = (props) => {
   return (
     <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
       <View>
-        <StyleText align="center" fontWeight="bold">
+        <StyledText align="center" fontWeight="bold">
           STARS
-        </StyleText>
-        <StyleText align="center">
+        </StyledText>
+        <StyledText align="center">
           {parseThousand(props.stargazersCount)}
-        </StyleText>
+        </StyledText>
       </View>
       <View>
-        <StyleText align="center" fontWeight="bold">
+        <StyledText align="center" fontWeight="bold">
           FORKS
-        </StyleText>
-        <StyleText align="center">{parseThousand(props.forksCount)}</StyleText>
+        </StyledText>
+        <StyledText align="center">{parseThousand(props.forksCount)}</StyledText>
       </View>
       <View>
-        <StyleText align="center" fontWeight="bold">
+        <StyledText align="center" fontWeight="bold">
           REVIEW
-        </StyleText>
-        <StyleText align="center">{props.reviewCount}</StyleText>
+        </StyledText>
+        <StyledText align="center">{props.reviewCount}</StyledText>
       </View>
       <View>
-        <StyleText align="center" fontWeight="bold">
+        <StyledText align="center" fontWeight="bold">
           RATING
-        </StyleText>
-        <StyleText align="center">{props.ratingAverage}</StyleText>
+        </StyledText>
+        <StyledText align="center">{props.ratingAverage}</StyledText>
       </View>
     </View>
   );

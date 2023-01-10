@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function StyleText({
+export default function StyledText({
   align,
   children,
   color,

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Image, Platform } from "react-native";
-import StyleText from "./StyleText";
+import StyledText from "./StyledText";
 import RepositoryStats from "./RepositoryStats";
 import theme from "../theme";
 
@@ -11,11 +11,11 @@ const RepositoryItemHeader = (props) => {
         <Image style={styles.image} source={{ uri: props.ownerAvatarUrl }} />
       </View>
       <View style={{ flex: 1 }}>
-        <StyleText fontSize="subheading" fontWeight="bold">
+        <StyledText fontSize="subheading" fontWeight="bold">
           {props.fullName}
-        </StyleText>
-        <StyleText>{props.description}</StyleText>
-        <StyleText style={styles.language}>{props.language}</StyleText>
+        </StyledText>
+        <StyledText>{props.description}</StyledText>
+        <StyledText style={styles.language}>{props.language}</StyledText>
       </View>
     </View>
   );

@@ -3,12 +3,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import MaterialComunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 // Screens
 
 import HomeScreen from "./src/screens/HomeScreen";
 import SettingsScreen from "./src/screens/SettingsScreen";
 import StackScreen from "./src/screens/StackScreen";
 import RepositoryList from "./src/components/RepositoryList";
+import LoginScreen from "./src/screens/LoginScreen.jsx"
 
 const HomeStack = createNativeStackNavigator();
 
@@ -49,7 +51,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Sign In"
-        component={SettingsScreen}
+        component={LoginScreen}
         options={{
           tabBarLabel: "Sign In",
           tabBarIcon: ({ color, size }) => (
